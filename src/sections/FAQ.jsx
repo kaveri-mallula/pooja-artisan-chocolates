@@ -103,9 +103,8 @@ export default function FAQ() {
             <p className="font-display text-xl italic mb-2">Still have questions?</p>
             <p className="font-sans text-sm text-cream/70 mb-6">We're just a message away. Reach out on WhatsApp and we'll be happy to help!</p>
             <a
-              href="https://wa.me/919999999999?text=Hi%2C%20I%20have%20a%20question%20about%20Pooja%20Artisan%20Chocolates!"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
+
               className="btn-gold inline-flex"
             >
               Chat on WhatsApp

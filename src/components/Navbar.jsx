@@ -45,11 +45,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-cream/95 backdrop-blur-md shadow-luxury py-2'
-          : 'bg-transparent py-4'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+        ? 'bg-cream/95 backdrop-blur-md shadow-luxury py-2'
+        : 'bg-transparent py-4'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
@@ -62,9 +61,8 @@ export default function Navbar() {
           <img
             src={logo}
             alt="Pooja Artisan Chocolates Logo"
-            className={`rounded-full object-cover transition-all duration-300 group-hover:scale-105 ${
-              scrolled ? 'w-12 h-12' : 'w-14 h-14'
-            }`}
+            className={`rounded-full object-cover transition-all duration-300 group-hover:scale-105 ${scrolled ? 'w-12 h-12' : 'w-14 h-14'
+              }`}
           />
           <div className={`hidden sm:block transition-all duration-300 ${scrolled ? '' : 'text-cream'}`}>
             <p className={`font-display text-lg font-semibold leading-none tracking-wide ${scrolled ? 'text-chocolate' : 'text-cream'}`}>
@@ -99,14 +97,13 @@ export default function Navbar() {
         {/* Order CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20order%20chocolates!"
+            href="#contact"
             target="_blank"
             rel="noopener noreferrer"
-            className={`font-sans text-xs font-semibold tracking-wider uppercase px-6 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-gold ${
-              scrolled
-                ? 'bg-gold text-chocolate-dark hover:bg-gold-light'
-                : 'bg-gold text-chocolate-dark hover:bg-gold-light'
-            }`}
+            className={`font-sans text-xs font-semibold tracking-wider uppercase px-6 py-2.5 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-gold ${scrolled
+              ? 'bg-gold text-chocolate-dark hover:bg-gold-light'
+              : 'bg-gold text-chocolate-dark hover:bg-gold-light'
+              }`}
           >
             Order Now
           </a>
@@ -128,9 +125,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-          menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
       >
         <div className="bg-cream/98 backdrop-blur-md border-t border-chocolate/10 px-6 py-4 flex flex-col gap-1">
           {navLinks.map((link) => (
@@ -138,17 +134,15 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-              className={`font-sans text-sm font-medium tracking-wider uppercase py-3 px-2 border-b border-chocolate/5 transition-colors duration-200 ${
-                activeLink === link.href ? 'text-chocolate font-semibold' : 'text-chocolate/70 hover:text-chocolate'
-              }`}
+              className={`font-sans text-sm font-medium tracking-wider uppercase py-3 px-2 border-b border-chocolate/5 transition-colors duration-200 ${activeLink === link.href ? 'text-chocolate font-semibold' : 'text-chocolate/70 hover:text-chocolate'
+                }`}
             >
               {link.label}
             </a>
           ))}
           <a
-            href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20order%20chocolates!"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+
             className="mt-3 btn-gold text-center"
           >
             Order Now

@@ -159,11 +159,10 @@ function ProductCard({ product }) {
           />
         ) : (
           <div
-            className={`w-full h-full flex items-center justify-center ${
-              product.gradientDir === 'br'
-                ? 'bg-gradient-to-br from-cream-200 via-gold/20 to-chocolate-light/30'
-                : 'bg-gradient-to-b from-chocolate-dark/80 to-chocolate/50'
-            }`}
+            className={`w-full h-full flex items-center justify-center ${product.gradientDir === 'br'
+              ? 'bg-gradient-to-br from-cream-200 via-gold/20 to-chocolate-light/30'
+              : 'bg-gradient-to-b from-chocolate-dark/80 to-chocolate/50'
+              }`}
           >
             <span className="text-7xl animate-float" style={{ animationDuration: '4s' }}>
               {product.emoji}
@@ -214,9 +213,8 @@ function ProductCard({ product }) {
             <p className="font-display text-lg font-semibold text-gold-dark">{product.price}</p>
           </div>
           <a
-            href={`https://wa.me/919999999999?text=${whatsappMsg}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+
             className="btn-primary text-xs px-5 py-2.5 rounded-full"
           >
             Order
@@ -260,11 +258,10 @@ export default function Products() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-5 py-2 rounded-full font-sans text-xs font-semibold tracking-wider uppercase transition-all duration-300 ${
-                activeTab === tab
-                  ? 'bg-chocolate text-cream shadow-luxury scale-105'
-                  : 'bg-white text-chocolate/75 hover:bg-cream-100 hover:text-chocolate border border-chocolate/10'
-              }`}
+              className={`px-5 py-2 rounded-full font-sans text-xs font-semibold tracking-wider uppercase transition-all duration-300 ${activeTab === tab
+                ? 'bg-chocolate text-cream shadow-luxury scale-105'
+                : 'bg-white text-chocolate/75 hover:bg-cream-100 hover:text-chocolate border border-chocolate/10'
+                }`}
             >
               {tab}
             </button>
@@ -294,9 +291,8 @@ export default function Products() {
           </p>
           <a
             id="custom-order-btn"
-            href="https://wa.me/919999999999?text=Hi%2C%20I%20have%20a%20custom%20order%20request!"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
+
             className="btn-gold inline-flex"
           >
             Request Custom Order →

@@ -115,7 +115,7 @@ export default function Hero() {
         >
           <a
             id="hero-order-btn"
-            href="https://wa.me/919999999999?text=Hi%2C%20I%20want%20to%20order%20chocolates!"
+            href="#contact"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold text-base px-10 py-4 shadow-gold"

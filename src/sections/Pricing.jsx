@@ -80,11 +80,10 @@ function PricingCard({ item }) {
   return (
     <article
       id={`pricing-${item.id}`}
-      className={`group relative bg-white rounded-3xl p-8 border transition-all duration-500 flex flex-col h-full ${
-        item.isFeatured
+      className={`group relative bg-white rounded-3xl p-8 border transition-all duration-500 flex flex-col h-full ${item.isFeatured
           ? 'border-gold shadow-luxury ring-1 ring-gold/30 lg:scale-105 z-10'
           : 'border-chocolate/10 shadow-card hover:shadow-card-hover hover:-translate-y-2'
-      }`}
+        }`}
     >
       {item.isFeatured && (
         <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gold text-chocolate-dark text-[10px] font-sans font-bold tracking-widest uppercase shadow-md">
@@ -127,11 +126,10 @@ function PricingCard({ item }) {
               key={size}
               id={`btn-${item.id}-${size}`}
               onClick={() => setPieces(size)}
-              className={`py-2 px-3 rounded-xl font-sans text-xs font-semibold transition-all duration-300 ${
-                pieces === size
+              className={`py-2 px-3 rounded-xl font-sans text-xs font-semibold transition-all duration-300 ${pieces === size
                   ? 'bg-chocolate text-cream shadow-md'
                   : 'bg-cream-50 text-chocolate/70 hover:bg-cream-100 hover:text-chocolate border border-chocolate/10'
-              }`}
+                }`}
             >
               {size} Pcs
             </button>
@@ -143,14 +141,11 @@ function PricingCard({ item }) {
       <div className="mt-auto pt-4 border-t border-chocolate/10">
         <a
           id={`order-btn-${item.id}`}
-          href={`https://wa.me/919999999999?text=${whatsappMsg}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`w-full py-3.5 rounded-full font-sans text-xs font-semibold tracking-wider uppercase text-center transition-all duration-300 inline-block ${
-            item.isFeatured
+          href="#contact"
+          className={`w-full py-3.5 rounded-full font-sans text-xs font-semibold tracking-wider uppercase text-center transition-all duration-300 inline-block ${item.isFeatured
               ? 'bg-gold text-chocolate-dark hover:bg-gold-light hover:shadow-gold hover:-translate-y-0.5'
               : 'bg-chocolate text-cream hover:bg-chocolate-dark hover:shadow-luxury hover:-translate-y-0.5'
-          }`}
+            }`}
         >
           Order {pieces} Pcs Box →
         </a>
